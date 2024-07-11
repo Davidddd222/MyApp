@@ -1,0 +1,27 @@
+Nulos 
+
+Nullable Types (Tipos nulos):
+En Kotlin, todos los tipos de datos son no nulos de manera predeterminada, lo que significa que una variable no puede contener un valor nulo a menos que se declare explícitamente como nullable utilizando el operador ?. Por ejemplo:
+
+var nombre: String = "Juan" // No puede ser nulo
+var apellido: String? = null // Puede ser nulo
+-------------------------------------------------------------------------------------
+Safe Call Operator (?.):
+Kotlin proporciona un operador seguro de llamada (?.) que permite acceder a propiedades o métodos en una cadena de llamadas sin preocuparse por valores nulos. Si alguna parte de la cadena es nula, la expresión completa devolverá nulo sin lanzar una excepción. Ejemplo:
+
+val longitud: Int? = nombre?.length
+-------------------------------------------------------------------------------------
+
+Operador Elvis (?:):
+El operador Elvis (?:) se utiliza para proporcionar un valor predeterminado cuando una expresión es nula. Por ejemplo:
+
+val longitudNoNula: Int = nombre?.length ?: 0
+-------------------------------------------------------------------------------------
+
+Tipos No Nulos (!!):
+El operador de afirmación no nula (!!) se usa para forzar a Kotlin a tratar una expresión como no nula, incluso cuando el compilador no puede determinar que no será nula. Debe usarse con precaución ya que puede resultar en una excepción NullPointerException si la expresión es realmente nula.
+
+
+Funciones y Tipos de Datos para Tratar Nulos:
+Kotlin proporciona funciones y tipos de datos específicos para trabajar con valores nulos de manera segura, como let, run, with, also, y los tipos de datos Nullable, Non-Nullable, entre otros.
+
